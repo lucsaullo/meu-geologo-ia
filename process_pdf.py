@@ -15,7 +15,7 @@ if not OPENAI_API_KEY:
     raise ValueError("A chave da API da OpenAI não foi encontrada. Verifique seu arquivo .env")
 
 # --- CONFIGURAÇÃO DO DOWNLOAD ---
-PDF_URL = "https://drive.google.com/uc?id=COLOQUE_O_ID_DO_SEU_ARQUIVO_AQUI"
+PDF_URL = "https://drive.google.com/uc?id=1TcMDmuq4R8LXrTMKSaqx88pQOPUTomNm"
 PDF_LOCAL_PATH = "livro_geologia.pdf"
 
 # --- ETAPA DE DOWNLOAD ---
