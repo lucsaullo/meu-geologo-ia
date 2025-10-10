@@ -1,4 +1,4 @@
-# Arquivo: netlify/functions/ask_geologist.py
+# Arquivo: netlify/functions/ask_geologist.py 
 
 import json
 import os
