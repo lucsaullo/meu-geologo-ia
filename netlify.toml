@@ -1,1 +1,17 @@
+# Arquivo: netlify.toml
 
+[build]
+  # 1. Instala as dependências Python do requirements.txt
+  # 2. E DEPOIS executa o script para baixar e processar o PDF
+  command = "pip install -r requirements.txt && python process_pdf.py"
+
+  # Diz à Netlify onde encontrar a pasta das funções de backend
+  functions = "netlify/functions/"
+
+  # Diz à Netlify qual pasta contém o site (frontend) para publicar
+  publish = "public/"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
