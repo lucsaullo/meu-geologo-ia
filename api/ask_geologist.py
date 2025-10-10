@@ -4,6 +4,7 @@
 __import__('pysqlite3')
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+# ------------------------------------
 
 import json
 import os
@@ -12,7 +13,8 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.chains import ConversationalRetrievalChain
 from langchain.chat_models import ChatOpenAI
 
-OPENAI_API_KEY = os.getenv("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")
+# CORRETO: Pega o valor da variável de ambiente chamada "OPENAI_API_KEY"
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 CHROMA_PATH = "chroma_index"
 
 def handler(event, context):
