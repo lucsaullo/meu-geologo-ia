@@ -6,7 +6,7 @@
   command = "pip install -r requirements.txt && python process_pdf.py"
 
   # Diz à Netlify onde encontrar a pasta das funções de backend
-  functions = "netlify/functions/"
+  functions = "netlifyfunctions/"
 
   # Diz à Netlify qual pasta contém o site (frontend) para publicar
   publish = "public/"
