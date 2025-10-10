@@ -9,7 +9,7 @@ from langchain.chat_models import ChatOpenAI
 
 # A chave será lida da variável de ambiente que você configurará na Netlify.
 # NUNCA escreva a chave diretamente aqui.
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = os.getenv("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")
 INDEX_PATH = "faiss_index" # Caminho para o índice que o process_pdf.py criou
 
 def handler(event, context):
