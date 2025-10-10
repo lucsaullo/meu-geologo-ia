@@ -1,5 +1,10 @@
 # Arquivo: api/ask_geologist.py
 
+# --- Bloco de correção para o sqlite3 ---
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import json
 import os
 from langchain.vectorstores import Chroma
