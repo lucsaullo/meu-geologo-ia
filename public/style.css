@@ -1,1 +1,129 @@
+/* Arquivo: public/style.css */
 
+/* Configuração base para a página inteira */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Usando a fonte do Google que importamos no HTML */
+    background-color: #f0f2f5; /* Um cinza bem claro para o fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa a altura inteira da tela */
+}
+
+/* O container principal do chat */
+.chat-container {
+    width: 90%;
+    max-width: 700px; /* Limita a largura em telas grandes */
+    height: 95vh;     /* Limita a altura */
+    max-height: 800px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Garante que os cantos arredondados sejam respeitados */
+}
+
+/* O cabeçalho do chat */
+.chat-header {
+    background-color: #2c3e50; /* <<-- MUDE ESTA COR para sua identidade visual */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #253544;
+}
+.chat-header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+.chat-header p {
+    margin: 5px 0 0;
+    opacity: 0.9;
+    font-size: 0.9em;
+}
+
+/* A caixa onde as mensagens aparecem */
+.chat-box {
+    flex-grow: 1; /* Faz esta área ocupar todo o espaço vertical disponível */
+    padding: 20px;
+    overflow-y: auto; /* Adiciona uma barra de rolagem se as mensagens não couberem */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre as mensagens */
+}
+
+/* Estilo geral de cada balão de mensagem */
+.message {
+    padding: 12px 18px;
+    border-radius: 20px;
+    line-height: 1.5;
+    max-width: 75%;
+}
+
+/* Mensagem do usuário (alinhada à direita) */
+.user-message {
+    background-color: #3498db; /* <<-- MUDE ESTA COR para as mensagens do usuário */
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px; /* Efeito de "balão de fala" */
+}
+
+/* Mensagem do bot (alinhada à esquerda) */
+.bot-message {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px; /* Efeito de "balão de fala" */
+}
+
+/* Estilo da citação da fonte dentro da mensagem do bot */
+.bot-message .source {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed #bdc3c7;
+    font-size: 0.85em;
+    font-style: italic;
+    color: #555;
+    word-break: break-word; /* Evita que a citação quebre o layout */
+}
+.bot-message .source strong {
+    color: #333;
+    font-style: normal;
+}
+
+/* O formulário de envio de mensagem */
+.chat-form {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 1em;
+}
+#user-input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #2c3e50; /* <<-- MUDE ESTA COR para combinar com o cabeçalho */
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+button:hover {
+    background-color: #3e5670;
+}
