@@ -1,5 +1,9 @@
 # Arquivo: process_pdf.py
 
+# --- Bloco de correção para o sqlite3 ---
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 import os
 import requests
 import chromadb
